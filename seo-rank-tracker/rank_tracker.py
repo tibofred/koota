@@ -1,19 +1,30 @@
 from typing import Optional
-
 import os
 import json
 import requests
 from datetime import date
 from pathlib import Path
+from dotenv import load_dotenv
+
+BASE_DIR = Path(__file__).resolve().parent
+PROJECT_ROOT = BASE_DIR.parent
+ENV_PATH = PROJECT_ROOT / ".env"
+
+print("BASE_DIR:", BASE_DIR)
+print("PROJECT_ROOT:", PROJECT_ROOT)
+print("ENV_PATH:", ENV_PATH)
+print("ENV exists:", ENV_PATH.exists())
+
+load_dotenv(dotenv_path=ENV_PATH)
 
 API_KEY = os.getenv("SEARCHAPI_KEY")
+print("API loaded:", bool(API_KEY))
 
 if not API_KEY:
     raise ValueError("La variable d'environnement SEARCHAPI_KEY est absente.")
 
 CONFIG_FILE = "clients.json"
 OUTPUT_DIR = "seo-json"
-
 
 def search_keyword(keyword: str, location: str) -> dict:
     url = "https://www.searchapi.io/api/v1/search"

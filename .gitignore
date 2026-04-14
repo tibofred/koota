@@ -1,0 +1,6 @@
+.env
+.DS_Store
+__pycache__/
+*.pyc
+seo-json/
+rank_results.csv

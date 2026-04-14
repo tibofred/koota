@@ -1,0 +1,26 @@
+{
+  "clients": [
+    {
+      "name": "IDCOM",
+      "slug": "idcom-international",
+      "domain": "lapnl.ca",
+      "location": "Montreal, Quebec, Canada",
+      "keywords": [
+        "canalisation"
+      ],
+      "exclude_domains": [
+        "lapnl.ca",
+        "wikipedia.org",
+        "fr.wikipedia.org",
+        "facebook.com",
+        "instagram.com",
+        "linkedin.com",
+        "youtube.com",
+        "pinterest.com",
+        "tripadvisor.ca",
+        "apple.com",
+        "larousse.fr"
+      ]
+    }
+  ]
+}
